@@ -13,8 +13,8 @@ mongo:
 spring:
   data:
     mongodb:
-    port: ${mongo.port}
-    uri: ${mongo.host}
+      port: ${mongo.port}
+      uri: ${mongo.host}
   kafka:
     consumer-topic: "SOIL_DATA"
     producer-topic: "IRRIGATION_ALERT"
