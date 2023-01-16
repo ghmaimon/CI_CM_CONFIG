@@ -15,7 +15,10 @@ spring:
       sasl:
         mechanism: "PLAIN"
         jaas:
-          config: "org.apache.kafka.common.security.plain.PlainLoginModule   required username=3ON4VM2WFBCNBPK6   password=ZNqvcPq6oy6mf8tOjHziXHx0kgfhDt3+30LX02KO3bm7tTxnUf0M2P2rEl6QUSj2"
+          config: "org.apache.kafka.common.security.plain.PlainLoginModule"
+            required:
+              username: "3ON4VM2WFBCNBPK6"
+              password: "ZNqvcPq6oy6mf8tOjHziXHx0kgfhDt3+30LX02KO3bm7tTxnUf0M2P2rEl6QUSj2"
     consumer:
       bootstrap-servers: "pkc-75m1o.europe-west3.gcp.confluent.cloud:9092"
       key-deserializer: "org.apache.kafka.common.serialization.StringDeserializer"
