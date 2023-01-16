@@ -1,10 +1,9 @@
-eureka-server:
-  host: "localhost"
-  port: "8761"
 
 eureka:
+  host: "localhost"
+  port: "8761"
   client:
     register-with-eureka: true
     fetch-registry: true
     serviceUrl:
-      defaultZone: "http://${eureke-server.host}:${eureka-server.port}/eureka/"
+      defaultZone: "http://${eureka.host}:${eureka.port}/eureka/"
