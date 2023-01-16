@@ -4,21 +4,22 @@ sampling:
 server:
   port: "8401"
   
-  
+spring.kafka.jaas.enabled=true
+spring.kafka.properties.sasl.mechanism=PLAIN
+spring.kafka.properties.sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="spring_bO0t" password="i_am_a_spring_bO0t_user";
 spring:
   kafka:
     consumer-topic: "SOIL_DATA"
     producer-topic: "IRRIGATION_ALERT"
+    jaas:
+      enabled: "true"
     properties:
       security:
         protocol: "SASL_SSL"
       sasl:
         mechanism: "PLAIN"
         jaas:
-          config: "org.apache.kafka.common.security.plain.PlainLoginModule"
-            required:
-              username: "3ON4VM2WFBCNBPK6"
-              password: "ZNqvcPq6oy6mf8tOjHziXHx0kgfhDt3+30LX02KO3bm7tTxnUf0M2P2rEl6QUSj2"
+          config: "org.apache.kafka.common.security.plain.PlainLoginModule required username = '3ON4VM2WFBCNBPK6' password: 'ZNqvcPq6oy6mf8tOjHziXHx0kgfhDt3+30LX02KO3bm7tTxnUf0M2P2rEl6QUSj2'
     consumer:
       bootstrap-servers: "pkc-75m1o.europe-west3.gcp.confluent.cloud:9092"
       key-deserializer: "org.apache.kafka.common.serialization.StringDeserializer"
