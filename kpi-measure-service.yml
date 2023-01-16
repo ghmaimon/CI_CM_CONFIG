@@ -4,7 +4,17 @@ sampling:
 server:
   port: "8401"
 
+mongo:
+    user: "kpi-measures-user"
+    password: "Ny3a8u541M796Imf"
+    host: "mongodb+srv://${mongo.user}:${mongo.password}@db-mongodb-nyc1-71962-6157d0c7.mongo.ondigitalocean.com/kpi-measures-db?tls=true&authSource=admin&replicaSet=db-mongodb-nyc1-71962"
+    port: "27017"
+    
 spring:
+  data:
+    mongodb:
+    port: ${mongo.port}
+    uri: ${mongo.host}
   kafka:
     consumer-topic: "SOIL_DATA"
     producer-topic: "IRRIGATION_ALERT"
