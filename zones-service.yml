@@ -1,2 +1,9 @@
 server:
   port: "8400"
+  
+mongo:
+    host: "mongodb+srv://zones-user:43Z8Rq26L9S5cFy0@db-mongodb-nyc1-71962-6157d0c7.mongo.ondigitalocean.com/zones-db?tls=true&authSource=admin&replicaSet=db-mongodb-nyc1-71962"
+    port: "27017"
+    database: "zones-db"
+    username: "zones-user"
+    password: "43Z8Rq26L9S5cFy0"
