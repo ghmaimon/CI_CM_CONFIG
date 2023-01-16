@@ -1,0 +1,15 @@
+sampling:
+  ratio: "15"
+  
+server:
+  port: "8401"
+  
+spring:
+  kafka:
+    host: "localhost"
+    consumer:
+      bootstrap-servers: "${spring.kafka.host}:9092}", "${spring.kafka.host}:9093", "${spring.kafka.host}:9094"
+      key-deserializer: "org.apache.kafka.common.serialization.StringDeserializer"
+      value-deserializer: "org.springframework.kafka.support.serializer.JsonDeserializer"
+      spring.kafka.consumer.properties.spring.json.trusted.packages: "*"
+      group-id: kpi-measures-listiner-group
