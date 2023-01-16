@@ -21,6 +21,12 @@ spring:
     jaas:
       enabled: "true"
     properties:
+      auto-offset-reset: "latest"
+      json:
+        use:
+          type:
+            headers: "false"
+            key: "false"
       security:
         protocol: "SASL_SSL"
       sasl:
@@ -35,4 +41,4 @@ spring:
           json:
             trusted:
               packages: "*"
-      group-id: "kpi-measures-listiner-group"
+      group-id: "kpi-measures-consumer-group"
