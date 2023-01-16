@@ -4,9 +4,6 @@ sampling:
 server:
   port: "8401"
   
-spring.kafka.jaas.enabled=true
-spring.kafka.properties.sasl.mechanism=PLAIN
-spring.kafka.properties.sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="spring_bO0t" password="i_am_a_spring_bO0t_user";
 spring:
   kafka:
     consumer-topic: "SOIL_DATA"
