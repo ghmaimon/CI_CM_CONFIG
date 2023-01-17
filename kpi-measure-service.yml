@@ -1,5 +1,5 @@
 sampling:
-  ratio: "15"
+  ratio: "50"
 
 server:
   port: "8401"
