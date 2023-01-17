@@ -41,4 +41,4 @@ spring:
           json:
             trusted:
               packages: "*"
-      group-id: "kpi-measures-consumer-group"
+      group-id: "ci-cm-kpi-measures-consumer-group"
